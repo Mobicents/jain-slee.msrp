@@ -28,7 +28,7 @@
         <jain-sip-ri.version>1.2.170</jain-sip-ri.version>
 		<docs.ra.name>MSRP Resource Adaptor</docs.ra.name>
 		<docs.ra.dirname>msrp-ra</docs.ra.dirname>
-		<docs.bookid>MsrpRA</docs.bookid>
+		<docs.bookid>MSRP</docs.bookid>
 	</properties>
 
 	<build>

@@ -247,7 +247,7 @@ public class MsrpResourceAdaptor implements ResourceAdaptor {
 					ActivityAlreadyExistsException, NullPointerException,
 					IllegalStateException, SLEEException, StartActivityException {
 
-		MsrpSession activity = new BasicMsrpSession(sessionId, session);
+		MsrpSession activity = new BasicMsrpSession(sessionId, session, this);
 		// lookup the activity and check if already exists
 		if (activities.get(handle) == null) {
 			activities.put(handle, activity);
@@ -261,7 +261,15 @@ public class MsrpResourceAdaptor implements ResourceAdaptor {
 		return activity;
 	}
 
-    public void fireEvent(Object event, MsrpActivityHandle handle) {
+	void endActivity(String sessionId) {
+		MsrpActivityHandle handle = new MsrpActivityHandle(sessionId);
+		if (activities.get(handle) != null) {
+			activities.remove(handle);
+			endActivity(handle);
+		}
+	}
+
+	public void fireEvent(Object event, MsrpActivityHandle handle) {
     	if (trc.isFineEnabled())
     		trc.fine("New Msrp-RA event: " + event.getClass().getName());
 

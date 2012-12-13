@@ -58,14 +58,16 @@ public class BasicMsrpSession implements MsrpSession {
 
 	private static final long serialVersionUID = 1L;
 
+	private MsrpResourceAdaptor ra;
 	private String sessionId;
 	private Session session;
 	private final String toString;
 	private ArrayList<URI> toList;
 
-	public BasicMsrpSession(String sessionId, Session session) {
+	public BasicMsrpSession(String sessionId, Session session, MsrpResourceAdaptor ra) {
 		this.sessionId = sessionId;
 		this.session = session;
+		this.ra = ra;
 		this.toString = "MsrpSession { connectionId="+sessionId+",connection="+session.toString()+"}";
 	}
 
@@ -180,7 +182,10 @@ public class BasicMsrpSession implements MsrpSession {
 	 * @see org.mobicents.slee.resource.msrp.MsrpSession#disconnect()
 	 */
 	public void disconnect() {
-		session.tearDown();
+		if (session != null)
+			session.tearDown();
+		if (sessionId != null)
+			ra.endActivity(sessionId);
 	}
 
 	public String getSessionId() { return sessionId; }

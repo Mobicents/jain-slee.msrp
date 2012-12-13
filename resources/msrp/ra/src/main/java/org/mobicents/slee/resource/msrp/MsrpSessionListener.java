@@ -20,7 +20,7 @@
  */
 package org.mobicents.slee.resource.msrp;
 
-import javax.slee.facilities.Tracer;
+//import javax.slee.facilities.Tracer;
 
 import javax.net.msrp.*;
 import javax.net.msrp.events.MessageAbortedEvent;
@@ -37,13 +37,13 @@ import javax.net.msrp.ReportEvent;
  */
 class MsrpSessionListener implements SessionListener {
 	private MsrpResourceAdaptor ra;
-	private final Tracer trc;
+//	private final Tracer trc;
 
 	private MsrpSession session;
 
 	public MsrpSessionListener(MsrpResourceAdaptor ra, MsrpSession session) {
 		this.ra = ra;
-		this.trc = ra.getTracer();
+//		this.trc = ra.getTracer();
 		this.session = session;
 	}
 
@@ -104,6 +104,7 @@ class MsrpSessionListener implements SessionListener {
 		MsrpActivityHandle handle = new MsrpActivityHandle(this.session.getSessionId());
 		ConnectionLostEvent event = new ConnectionLostEvent(session, cause);
 		ra.fireEvent(event, handle);
+		ra.endActivity(this.session.getSessionId());
 	}
 
 	/* (non-Javadoc)
