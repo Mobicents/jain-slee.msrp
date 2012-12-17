@@ -26,8 +26,9 @@
 	<properties>
         <jain-sip-api.version>1.2</jain-sip-api.version>
         <jain-sip-ri.version>1.2.170</jain-sip-ri.version>
-		<docs.ra.name>MSRP Resource Adaptor</docs.ra.name>
-		<docs.ra.dirname>msrp-ra</docs.ra.dirname>
+		<docs.profile>mobicents</docs.profile>
+		<docs.ra.name>MSRP</docs.ra.name>
+		<docs.ra.dirname>msrp</docs.ra.dirname>
 		<docs.bookid>MSRP</docs.bookid>
 	</properties>
 
