@@ -10,14 +10,14 @@
 
 	<section id="preinstall_requirements_and_prerequisites">
 		<title>Pre-Install Requirements and Prerequisites</title>
-		<para>Ensure that the following requirements have been met before continuing with the install.</para>
+		<para>Ensure that the following requirements have been met before continuing with the installation.</para>
 		<section id="hardware_requirements">
 			<title>Hardware Requirements</title>
-			<para>The RA hardware requirements don't differ from the underlying &THIS.PLATFORM; JAIN SLEE requirements, refer to its documentation for further information.</para>
+			<para>The RA hardware requirements do not differ from the underlying &THIS.PLATFORM; JAIN SLEE installation requirements. Please refer to the &THIS.PLATFORM; JAIN SLEE documentation for further information.</para>
 		</section>
 		<section id="software_prerequisites">
 			<title>Software Prerequisites</title>
-			<para>The RA requires &THIS.PLATFORM; JAIN SLEE properly set.</para>		
+			<para>The &THIS.RA; RA requires that &THIS.PLATFORM; JAIN SLEE correctly set.</para>		
 		</section>
 	</section>	
 
@@ -34,7 +34,7 @@
 				    <important>
 				    	<para>Git is used to manage Mobicents JAIN SLEE source code. Instructions for downloading, installing and using Git can be found at <ulink url="http://git-scm.com/" /></para>
 				    </important>
-				    <para>Use Git to checkout a specific release source, the Git repository URL is &THIS.SOURCE_CODE_URL;, then switch to the specific release version, lets consider &THIS.VERSION;.</para>
+				    <para>Use Git to checkout a specific release source. In this example, the Git repository URL is located at &THIS.SOURCE_CODE_URL;. In this user guide, release version &THIS.VERSION; is used.</para>
 				    <programlisting>
 [usr]$ git clone &THIS.SOURCE_CODE_URL; mobicents-jain-slee-&THIS.PACKAGE_NAME;
 [usr]$ cd mobicents-jain-slee-&THIS.PACKAGE_NAME;
@@ -52,14 +52,14 @@
 [usr]$ cd resources/&THIS.RA.DIRNAME;
 [usr]$ mvn install
 				    </programlisting>
-				    <para>Once the process finishes you should have the <literal>deployable-unit</literal> jar file in the <filename>target</filename> directory, if &THIS.PLATFORM; JAIN SLEE is installed and environment variable JBOSS_HOME is pointing to its underlying &JEE.PLATFORM; directory, then the deployable unit jar will also be deployed in the container.</para>
+				    <para>Once the process is completed, you should have the <literal>deployable-unit</literal> jar file in the <filename>jain-slee.msrp/resources/msrp/du/target</filename> directory. If &THIS.PLATFORM; JAIN SLEE is installed and the environment variable JBOSS_HOME is pointing to the &JEE.PLATFORM; directory, then, the deployable unit jar will also be deployed (copied) into the $JBOSS_HOME/server/default/deploy directory</para>
   				</step>
 			</procedure>      
 		</section>	
 
 		<section id="master_source_building">
 			<title>Development Master Source Building</title>
-			<para>Similar process as for <xref linkend="release_source_building"/>, the only change is the Git reference should be the <literal>master</literal>. The <literal>git checkout tags/&THIS.VERSION;</literal> command should not be performed. If already performed, the following should be used in order to switch back to the master:</para>
+			<para>The steps are similar to <xref linkend="release_source_building"/>. the only difference is that you should be in the GIT <literal>master</literal> branch. The <literal>git checkout tags/&THIS.VERSION;</literal> command should not be performed. If already performed, switch to the <literal>master</literal> branch by doing the following:</para>
 		    <programlisting>
 [usr]$ git checkout master
 			</programlisting>
@@ -70,21 +70,37 @@
 	<section id="install">
 		<title>Installing &THIS.PLATFORM; JAIN SLEE &THIS.RA; Resource Adaptor</title>
         <indexterm><primary>install</primary></indexterm>
-		<para>To install the Resource Adaptor simply execute provided ant script <filename>build.xml</filename> default target:</para>
+		<para>To install the Resource Adaptor, go to the <filename>jain-slee.msrp/resources/msrp/du/target/</filename> directory and run the ant command against the build.xml as follows:</para>
 		<programlisting>
 [usr]$ ant
 		</programlisting>
-		<para>The script will copy the RA deployable unit jar to the <literal>default</literal> &THIS.PLATFORM; JAIN SLEE server profile deploy directory, to deploy to another server profile use the argument <literal>-Dnode=</literal>.</para>
+
+<para>The result will be similar to the one below </para>
+		<programlisting>
+[carlos@linux-fedora target]$ ant
+Buildfile: /jain-slee.msrp/resources/msrp/du/target/build.xml
+
+deploy:
+     [copy] Copying 1 file to /mobicents-jainslee-2.7.0.FINAL-jboss-5.1.0.GA/jboss-5.1.0.GA/server/default/deploy
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+
+		</programlisting>
+		<para>The script will copy the RA deployable unit jar to the <literal>$JBOSS_HOME/server/default/deploy</literal> &THIS.PLATFORM; JAIN SLEE directory. If you want to deploy to another server profile, use the argument <literal>-Dnode=</literal>.</para>
+
+
+
 	</section>
 
 	<section id="uninstall">
 		<title>Uninstalling &THIS.PLATFORM; JAIN SLEE &THIS.RA; Resource Adaptor</title>
         <indexterm><primary>uninstall</primary></indexterm>
-		<para>To uninstall the Resource Adaptor simply execute provided ant script <filename>build.xml</filename> <literal>undeploy</literal> target:</para>
+		<para>To uninstall the Resource Adaptor, go to the <filename>jain-slee.msrp/resources/msrp/du/target/</filename> directory and run the ant command against the build.xml file as follows:</para>
 		<programlisting>
 [usr]$ ant undeploy
 		</programlisting>
-		<para>The script will delete the RA deployable unit jar from the <literal>default</literal> &THIS.PLATFORM; JAIN SLEE server profile deploy directory, to undeploy from another server profile use the argument <literal>-Dnode=</literal>.</para>
+		<para>The script will delete the RA deployable unit jar from the <literal>$JBOSS_HOME/server/default/deploy</literal> &THIS.PLATFORM; JAIN SLEE directory. If you want to undeploy from another server profile, use the argument <literal>-Dnode=</literal>.</para>
 	</section>			
 
 </chapter>
