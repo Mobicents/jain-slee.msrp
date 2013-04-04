@@ -16,11 +16,6 @@
 			<groupId>net.java.msrp</groupId>
 			<version>1.0.4.FINAL</version>
 		</dependency>
-		<dependency>
-            <artifactId>slf4j-api</artifactId>
-			<groupId>org.slf4j</groupId>
-			<version>1.6.4</version>
-		</dependency>
 	</dependencies>
 
 	<build>
