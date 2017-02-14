@@ -93,7 +93,9 @@ class MsrpSessionListener implements SessionListener {
 	 */
 	@Override
 	public void updateSendStatus(Session session, Message message, long numberBytesSent) {
-		// TODO Auto-generated method stub
+        MsrpActivityHandle handle = new MsrpActivityHandle(this.session.getSessionId());
+        UpdateSendEvent event = new UpdateSendEvent(session, message, numberBytesSent);
+        ra.fireEvent(event, handle);
 	}
 
 	/* (non-Javadoc)

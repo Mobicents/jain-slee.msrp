@@ -64,4 +64,12 @@
         <event-type-version>1.0</event-type-version>
         <event-class-name>javax.net.msrp.NicknameEvent</event-class-name>
     </event-definition>
+
+    <event-definition>
+        <description>A message being send has an update on how much was sent already.</description>
+        <event-type-name>net.java.slee.resource.msrp.UpdateSendEvent</event-type-name>
+        <event-type-vendor>net.java.slee</event-type-vendor>
+        <event-type-version>1.0</event-type-version>
+        <event-class-name>javax.net.msrp.UpdateSendEvent</event-class-name>
+    </event-definition>
 </event-jar>
