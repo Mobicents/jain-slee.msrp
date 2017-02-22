@@ -11,7 +11,7 @@
 	<artifactId>msrp-chatroom</artifactId>
 	<groupId>org.mobicents.examples</groupId>
 	<name>Mobicents :: Sbb :: ${project.artifactId}</name>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
 	<modules>
         <module>common</module>
@@ -50,8 +50,6 @@
 					<version>2.0</version>
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
-						<tagBase>https://mobicents.googlecode.com/svn/tags/servers/jain-slee/2.x.y/examples/msrp-chatroom</tagBase>
-						<branchBase>https://mobicents.googlecode.com/svn/branches/servers/jain-slee/2.x.y/examples/msrp-chatroom</branchBase>
 						<preparationGoals>clean install</preparationGoals>
 					</configuration>
 					</plugin>
@@ -61,9 +59,9 @@
 	</profiles>	
 
 	<scm>
-		<connection>scm:svn:https://mobicents.googlecode.com/svn/trunk/servers/jain-slee/examples/msrp-chatroom</connection>
-		<developerConnection>scm:svn:https://mobicents.googlecode.com/svn/trunk/servers/jain-slee/examples/msrp-chatroom</developerConnection>
-		<url>http://mobicents.googlecode.com/svn/trunk/servers/jain-slee/examples/msrp-chatroom</url>
+		<connection>scm:git:https://github.com/RestComm/jain-slee.msrp.git</connection>
+		<developerConnection>scm:git:git@github.com:RestComm/jain-slee.msrp.git</developerConnection>
+		<url>https://github.com/RestComm/jain-slee.msrp</url>
 	</scm>
 
 	<build>

@@ -160,6 +160,21 @@
             getMsrpSession().disconnect();
         }
 
+        /**
+         * There's an update on the message that has been sent
+         * (usually when sending has completed, or -in case of large messages-
+         * when the next 10% has been sent).
+         * @param event the update event
+         * @param aci
+         */
+        public void onUpdateSend(UpdateSendEvent event, ActivityContextInterface aci) {
+            if (event.getMessage().isComplete()) {
+            /*
+             * TODO: implement action when message has been completely sent.
+             */
+                ;
+            }
+        }
 
         public void setSbbContext(SbbContext context) {
             sbbContext = context;

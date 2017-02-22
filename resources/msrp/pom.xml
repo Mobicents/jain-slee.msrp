@@ -11,7 +11,7 @@
 
 	<artifactId>mobicents-slee-ra-msrp</artifactId>
 	<groupId>org.mobicents.resources</groupId>
-	<version>1.0.0.BETA</version>
+	<version>1.0.0</version>
 
 	<name>Mobicents :: Resources :: ${project.artifactId}</name>
 
@@ -29,7 +29,7 @@
 		<docs.profile>mobicents</docs.profile>
 		<docs.ra.name>MSRP</docs.ra.name>
 		<docs.ra.dirname>msrp</docs.ra.dirname>
-		<docs.bookid>MSRP</docs.bookid>
+		<docs.bookid>MSRP User Guide</docs.bookid>
 	</properties>
 
 	<build>

@@ -79,6 +79,13 @@
 					<entry>javax.net.msrp. NicknameEvent</entry>
 					<entry>An MSRP NICKNAME operation was received.</entry>
 				</row>
+	 			<row>
+					<entry>net.java.slee. resource.msrp. UpdateSendEvent</entry>
+					<entry>net.java.slee</entry>
+					<entry>1.0</entry>
+					<entry>javax.net.msrp. UpdateSendEvent</entry>
+					<entry>A message being send has an update on how much was sent already.</entry>
+				</row>
 			</tbody>
 		</tgroup>
 	</table>

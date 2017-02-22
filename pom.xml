@@ -2,9 +2,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.mobicents</groupId>
-		<artifactId>mobicents-parent</artifactId>
-		<version>2.22</version>
+		<groupId>org.mobicents.servers.jainslee</groupId>
+		<artifactId>restcomm-slee-parent</artifactId>
+		<version>2.8.1</version>
 	</parent>
 
 	<groupId>org.mobicents.servers.jainslee.msrp</groupId>
@@ -18,9 +18,9 @@
 	</modules>
 
 	<scm>
-		<connection>scm:git:https://code.google.com/p/jain-slee.msrp/</connection>
-		<developerConnection>scm:git:https://code.google.com/p/jain-slee.msrp/</developerConnection>
-		<url>https://code.google.com/p/jain-slee.msrp/</url>
+		<connection>scm:git:https://github.com/RestComm/jain-slee.msrp.git</connection>
+		<developerConnection>scm:git:git@github.com:RestComm/jain-slee.msrp.git</developerConnection>
+		<url>https://github.com/RestComm/jain-slee.msrp</url>
 	</scm>     
 
 	<profiles>
@@ -45,8 +45,8 @@
 
 	<repositories>
                 <repository>
-                        <id>mobicents-public-repository-group</id>
-                        <name>Mobicents Public Maven Repository Group</name>
+                        <id>restcomm-public-repository-group</id>
+                        <name>Restcomm Public Maven Repository Group</name>
                         <url>https://oss.sonatype.org/content/groups/public</url>
                         <layout>default</layout>
                         <releases>

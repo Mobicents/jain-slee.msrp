@@ -94,7 +94,7 @@
             </event-type-ref>
             <initial-event-select variable="ActivityContext"/>
         </event>
-        <event event-direction="Receive" initial-event="True">
+        <event event-direction="Receive" initial-event="False">
             <event-name>Bye</event-name>
             <event-type-ref>
                 <event-type-name>javax.sip.message.Request.BYE</event-type-name>

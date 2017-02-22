@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>mobicents-slee-ra-msrp</artifactId>
 		<groupId>org.mobicents.resources</groupId>
-		<version>1.0.0.BETA</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<artifactId>msrp-ratype</artifactId>
