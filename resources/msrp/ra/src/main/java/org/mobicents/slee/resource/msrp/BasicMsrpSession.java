@@ -105,6 +105,8 @@ public class BasicMsrpSession implements MsrpSession {
 
 		SdpFactory sf = SdpFactory.getInstance();
 		localSdp = sf.createSessionDescription();
+        localSdp.getOrigin().setSessionId(new Date().getTime());
+        localSdp.getOrigin().setSessionVersion(1);
 		localSdp.setConnection(sf.createConnection(Connection.IN, Connection.IP4, localUri.getHost()));
 		// TODO: also cater for TLS...
 		MediaDescription medium = sf.createMediaDescription("message", localUri.getPort(), 0, "TCP/MSRP", formats);
