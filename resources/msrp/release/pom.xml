@@ -3,13 +3,13 @@
 	<packaging>pom</packaging>
 
 	<parent>
-		<artifactId>mobicents-slee-ra-msrp</artifactId>
+		<artifactId>restcomm-slee-ra-msrp</artifactId>
 		<groupId>org.mobicents.resources</groupId>
-		<version>1.0.0</version>
+		<version>2.0.0</version>
 	</parent>
 
 	<artifactId>msrp-release</artifactId>
-	<name>Mobicents :: Resources :: ${pom.artifactId}</name>
+	<name>Restcomm :: Resources :: ${pom.artifactId}</name>
 
 	<profiles>
 		<profile>

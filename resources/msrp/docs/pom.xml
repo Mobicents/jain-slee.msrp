@@ -5,8 +5,8 @@
 
 	<parent>
 		<groupId>org.mobicents.resources</groupId>
-		<artifactId>mobicents-slee-ra-msrp</artifactId>
-		<version>1.0.0</version>
+		<artifactId>restcomm-slee-ra-msrp</artifactId>
+		<version>2.0.0</version>
 	</parent>
 
 	<artifactId>msrp-docs</artifactId>

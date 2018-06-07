@@ -3,15 +3,16 @@
 	<packaging>pom</packaging>
 
 	<parent>
-		<artifactId>mobicents-parent</artifactId>
-		<groupId>org.mobicents</groupId>
-		<version>2.24</version>
+        <groupId>org.mobicents.servers.jainslee.msrp</groupId>
+        <artifactId>restcomm-slee-msrp</artifactId>
+        <version>7.0.0</version>
+        <relativePath>../..</relativePath>
 	</parent>
 
 	<artifactId>msrp-chatroom</artifactId>
 	<groupId>org.mobicents.examples</groupId>
-	<name>Mobicents :: Sbb :: ${project.artifactId}</name>
-    <version>1.0.0</version>
+	<name>Restcomm :: Sbb :: ${project.artifactId}</name>
+    <version>2.0.0</version>
 
 	<modules>
         <module>common</module>
@@ -23,9 +24,7 @@
 	</modules>
 
 	<properties>
-        <jain-sip-api.version>1.2</jain-sip-api.version>
-		<mobicents.resource.sip11.version>2.7.0.FINAL</mobicents.resource.sip11.version>
-		<docs.profile>mobicents</docs.profile>
+		<mobicents.resource.sip11.version>7.0.13</mobicents.resource.sip11.version>
 	</properties>
 
 	<profiles>
@@ -87,9 +86,9 @@
 	<!-- dupe info from parent, but it's only way to retrieve the parent without checkout -->
 	<repositories>
 		<repository>
-			<id>jboss-public-repository-group</id>
-			<name>JBoss Public Maven Repository Group</name>
-			<url>https://repository.jboss.org/nexus/content/groups/public</url>
+			<id>restcomm-public-repository-group</id>
+			<name>Restcomm Public Maven Repository Group</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>

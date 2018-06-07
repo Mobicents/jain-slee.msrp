@@ -2,20 +2,36 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.mobicents.servers.jainslee</groupId>
-		<artifactId>restcomm-slee-parent</artifactId>
-		<version>2.8.1</version>
+        <groupId>org.restcomm</groupId>
+        <artifactId>restcomm-parent</artifactId>
+        <version>3.0.6</version>
 	</parent>
 
 	<groupId>org.mobicents.servers.jainslee.msrp</groupId>
-	<artifactId>mobicents-slee-msrp</artifactId>
-	<version>2.7.0-FINAL</version>
+	<artifactId>restcomm-slee-msrp</artifactId>
+	<version>7.0.0</version>
 
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>resources/msrp</module>
 	</modules>
+
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ant.version>1.7</ant.version>
+
+        <!-- default versions for mobicents maven plugins -->
+        <mobicents.library.plugin.version>1.0.0.FINAL</mobicents.library.plugin.version>
+        <mobicents.tools.mavenplugin.du.version>2.0.1.FINAL</mobicents.tools.mavenplugin.du.version>
+
+        <msrp.lib.version>1.3.0</msrp.lib.version>
+
+		<docs.profile>restcomm</docs.profile>
+		<docs.ra.name>MSRP</docs.ra.name>
+		<docs.ra.dirname>msrp</docs.ra.dirname>
+		<docs.bookid>MSRP User Guide</docs.bookid>
+	</properties>
 
 	<scm>
 		<connection>scm:git:https://github.com/RestComm/jain-slee.msrp.git</connection>
@@ -42,22 +58,21 @@
 	</profiles>	
 	
 	<!-- dupe info from parent, but it's only way to retrieve the parent without checkout -->
-
 	<repositories>
-                <repository>
-                        <id>restcomm-public-repository-group</id>
-                        <name>Restcomm Public Maven Repository Group</name>
-                        <url>https://oss.sonatype.org/content/groups/public</url>
-                        <layout>default</layout>
-                        <releases>
-                                <enabled>true</enabled>
-                                <updatePolicy>never</updatePolicy>
-                        </releases>
-                        <snapshots>
-                                <enabled>true</enabled>
-                                <updatePolicy>never</updatePolicy>
-                        </snapshots>
-                </repository>
+        <repository>
+            <id>restcomm-public-repository-group</id>
+            <name>Restcomm Public Maven Repository Group</name>
+            <url>https://oss.sonatype.org/content/groups/public</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
         </repositories>
 	
 </project>
