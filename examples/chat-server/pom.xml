@@ -11,8 +11,9 @@
 
 	<artifactId>msrp-chatroom</artifactId>
 	<groupId>org.mobicents.examples</groupId>
-	<name>Restcomm :: Sbb :: ${project.artifactId}</name>
     <version>2.0.0</version>
+
+	<name>Restcomm :: Sbb :: ${project.artifactId}</name>
 
 	<modules>
         <module>common</module>
