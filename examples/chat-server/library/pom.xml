@@ -35,11 +35,16 @@
 				<configuration>
 					<library-name>${project.artifactId}</library-name>
 					<library-vendor>${project.groupId}</library-vendor>
-					<library-version>${project.version}</library-version>
+					<library-version>1.0</library-version>
                     <resource-adaptor-type-ref>
                         <resource-adaptor-type-name>JAIN SIP</resource-adaptor-type-name>
                         <resource-adaptor-type-vendor>javax.sip</resource-adaptor-type-vendor>
-                        <resource-adaptor-type-version>${jain-sip-api.version}</resource-adaptor-type-version>
+                        <resource-adaptor-type-version>1.2</resource-adaptor-type-version>
+                    </resource-adaptor-type-ref>
+                    <resource-adaptor-type-ref>
+                        <resource-adaptor-type-name>MsrpResourceAdaptorType</resource-adaptor-type-name>
+                        <resource-adaptor-type-vendor>org.mobicents</resource-adaptor-type-vendor>
+                        <resource-adaptor-type-version>1.0</resource-adaptor-type-version>
                     </resource-adaptor-type-ref>
 				</configuration>
 			</plugin>

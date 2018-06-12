@@ -16,6 +16,11 @@
 			<groupId>net.java.msrp</groupId>
 			<version>${msrp.lib.version}</version>
 		</dependency>
+		<!--dependency>
+            <artifactId>slf4j-api</artifactId>
+			<groupId>org.slf4j</groupId>
+			<version>1.7.7</version>
+		</dependency-->
 	</dependencies>
 
 	<build>
@@ -39,7 +44,7 @@
                     <resource-adaptor-type-ref>
                         <resource-adaptor-type-name>JAIN SIP</resource-adaptor-type-name>
                         <resource-adaptor-type-vendor>javax.sip</resource-adaptor-type-vendor>
-                        <resource-adaptor-type-version>${jain-sip-api.version}</resource-adaptor-type-version>
+                        <resource-adaptor-type-version>1.2</resource-adaptor-type-version>
                     </resource-adaptor-type-ref>
 				</configuration>
 			</plugin>
