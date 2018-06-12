@@ -5,7 +5,7 @@ This example application implements a rudimentary chat server to illustrate the
 use of the MSRP resource adaptor.
 
 The application creates or joins chatrooms on (SIP-)request, using the
-`INVITE`s' `From:` username as a chatroom identifier. +
+`INVITE`s' `To:` username as a chatroom identifier. +
 Once a participant in that room, your messages are automatically broedcast to
 the other participants in the room.
 
