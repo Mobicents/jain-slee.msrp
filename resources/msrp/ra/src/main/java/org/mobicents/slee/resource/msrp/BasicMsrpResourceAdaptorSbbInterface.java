@@ -71,7 +71,7 @@ public class BasicMsrpResourceAdaptorSbbInterface implements MsrpResourceAdaptor
 				Session session = Session.create(false, true, ra.getAddress());
 				MsrpSession msession = ra.createActivity(sessionId, session, handle);
 				SessionListener listener = new MsrpSessionListener(ra, msession);
-				session.addListener(listener);
+				session.setListener(listener);
 				return msession;
 			} catch (Exception e) {
 	    		throw new ParseException(e);
@@ -104,7 +104,7 @@ public class BasicMsrpResourceAdaptorSbbInterface implements MsrpResourceAdaptor
 				Session session = Session.create(false, true, fromUri, ra.getAddress());
 				MsrpSession msession = ra.createActivity(sessionId, session, handle);
 				SessionListener listener = new MsrpSessionListener(ra, msession);
-				session.addListener(listener);
+				session.setListener(listener);
 				return msession;
 			} catch (Exception e) {
 	    		throw new ParseException(e);

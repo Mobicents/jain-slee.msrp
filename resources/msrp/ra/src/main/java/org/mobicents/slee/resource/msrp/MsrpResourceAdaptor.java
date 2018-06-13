@@ -47,7 +47,7 @@ import javax.net.msrp.Session;
  * A resource adaptor for the MSRP protocol.<BR>
  * Inspiration:<BR>
  * 	&nbsp;- java.net/projects/msrp<BR>
- * Shamelessly copied from MSRP-stack of Jo„o AndrÈ Pereira Antunes.<BR>
+ * Shamelessly copied from MSRP-stack of Jo√£o Andr√© Pereira Antunes.<BR>
  * Using the MSRP-stack, this subsystem implements an MSRP JSLEE Resource Adaptor.
  * <BR>
  * Thus, it enables Sbb's to intercept MSRP messages and file transfers as they see fit.
@@ -95,12 +95,8 @@ public class MsrpResourceAdaptor implements ResourceAdaptor {
 		return trc;
 	}
 
-	public InetAddress getAddress() {
-		try {
+	public InetAddress getAddress() throws UnknownHostException {
 			return InetAddress.getByName(address);
-		} catch (UnknownHostException e) {
-			return null;		// verifyConfig takes care of that.
-		}
 	}
 
 	// lifecycle methods ---------------

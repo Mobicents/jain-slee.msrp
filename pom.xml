@@ -15,6 +15,7 @@
 
 	<modules>
 		<module>resources/msrp</module>
+        <!--module>examples/chat-server</module-->
 	</modules>
 
 	<properties>
